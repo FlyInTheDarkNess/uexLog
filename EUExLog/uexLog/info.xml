@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <uexplugins>
     <plugin
-        uexName="uexLog" version="4.0.0" build="0">
-        <info>0: Log功能插件</info>
+        uexName="uexLog" version="4.0.1" build="2020032601">
+        <info>1: sendlog参数转化字符串</info>
+        <build>0: Log功能插件</build>
     </plugin>
 </uexplugins>
 

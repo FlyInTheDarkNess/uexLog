@@ -40,7 +40,13 @@ GCDAsyncUdpSocket *sockObj;
 }
 
 -(void)sendLog:(NSMutableArray *)inArguments{
+    if (inArguments.count < 1) {
+        return;
+    }
 	NSString *inLog = [inArguments objectAtIndex:0];
+    if (![inLog isKindOfClass:[NSString class]]) {
+        inLog = [inLog ac_JSONFragment];
+    }
     NSString *logServerIp = nil;
     if (self.webViewEngine.widget.logServerIp) {
         logServerIp = self.webViewEngine.widget.logServerIp;
